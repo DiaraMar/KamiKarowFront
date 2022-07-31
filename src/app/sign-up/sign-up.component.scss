@@ -1,0 +1,138 @@
+::ng-deep * { margin: 0; padding: 0;  }
+
+
+* {
+    border: none !important;
+    margin: 0px !important;
+    padding: 0 !important;
+}
+
+
+  .sign-up-screen{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+  }
+
+  .sign-up-sides{
+      display: flex;
+      height: 100%;
+
+  }
+
+  .switch-page{
+      display: none;
+      height: 0%;
+      text-align: center;
+  }
+
+  .switch-page button{
+      background-color: grey ;
+      border-radius: 25px;
+      height: 25px;
+      width: 25px;
+    
+  }
+
+  .btn-active {
+    opacity: 0.3;
+}
+ 
+
+  .side-sign-up-screen{
+//  box-sizing: border-box;
+    border: solid black 1px;
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "top-screen"
+      "main-screen"
+      "bottom-screen";
+  }
+
+
+//   left screen
+.left-screen {
+    background: linear-gradient(#FF0065, #FFB58A);
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    color: white;
+
+}
+
+.left-screen h2{
+    font-size: 2em;
+}
+
+.vision-message{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vision-message p{
+    font-size: 1.4em;
+}
+
+//Right screen
+.right-screen{
+    background-color: white;
+}
+
+.right-screen div{
+    color: black;
+}
+.top-screen{
+    grid-area: "top-screen";
+}
+
+.main-screen{
+    grid-area: "main-screen";
+}
+
+.bottom-screen{
+    grid-area: "bottom-screen";
+}
+
+
+ 
+
+@media only screen and (max-width: 1000px) {
+    
+    .hide{
+        display: none;
+    }
+
+    .side-screen{
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .switch-page{
+        display: block;
+        height: 5%;
+    }
+
+    .sign-up-sides{
+        flex-direction: column;
+        height: 95%;
+    }
+    .side-sign-up-screen{
+        height: 100%;
+        width: 100%;
+    }
+
+    
+
+  }
+
