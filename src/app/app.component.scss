@@ -3,13 +3,13 @@
 
 * {
     border: none !important;
-    margin: 0px !important;
+    margin: 0px 8%!important;
     padding: 0 !important;
 }
 
 .screen-app {
     height: 97vh;
-    width: 100%;
+    width: 90%;
     display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 10fr 0.2fr;
@@ -28,7 +28,12 @@
       
       .main { grid-area: main; border: 1px solid black;}
       
-      @media only screen and (max-width: 1000px) {
-    
-     
+      @media only screen and (max-width: 1550px) {
+        * {
+          margin: 0 !important;
+        }
+        .screen-app {
+          height: 97vh;
+          width: 100%;   
+      }
     }    
