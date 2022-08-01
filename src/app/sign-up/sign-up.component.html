@@ -1,36 +1,39 @@
 <section class="sign-up-screen">
-   <div class="sign-up-sides"> 
-        <div class="left-screen side-sign-up-screen" id="left-scr">
-          <h2>KAMI KAROW</h2>
-          <div class="vision-message">
-          <p>Une communauté créée</p>
-          <p>par et pour des consommatrices</p>
-          <p>qui veulent des routines capillaires éclairées</p>
+   <div class="sign-up-sides">
+     <div class="left-screen side-sign-up-screen" id="left-scr">
+       <h2 class="marque">KAMI KAROW</h2>
+       <div class="vision-message">
+         <p>Une communauté créée</p>
+         <p>par et pour des consommatrices</p>
+         <p>qui veulent des routines capillaires éclairées</p>
         </div>
-     </div>
-
-        <div class="right-screen side-sign-up-screen" id="right-scr">
-          <div class="items-right-screen top-screen flex">
-               <div class="progress-bar"><app-progress-bar [step]="2" [totalSteps]="4"  ></app-progress-bar></div> 
-               <div class="progress-bar">Action</div> 
+      </div>
+      <div class="right-screen side-sign-up-screen" id="right-scr">
+        <div class="items-right-screen top-screen flex">
+          <div class="progress-bar item-top-screen"><app-progress-bar [step]="2" [totalSteps]="4"  ></app-progress-bar></div>
+          <div class="alternativeCta item-top-screen"><a href="#home">Action pb</a></div> 
+        </div>
+        <div class="items-right-screen main-screen">
+          <h3 class="item-main-screen title-page">Créer un compte</h3>
+          <p class="item-main-screen sub-title-page">Un accompagnement capillaire inédit</p>
+          <div class="item-main-screen form">
+            <form #f="ngForm" (ngSubmit)="onSignUp(f)" novalidate >
+              <input name="name" class="name item-form" type="text" pattern="/^[a-zA-Z0-9_-]{4,16}$/" placeholder="NOM" ngModel required #first="ngModel">
+              <input name="email" class="email item-form" type="email"  pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" size="30" placeholder="EMAIL" ngModel required #second="ngModel">
+              <input name="password" class="password item-form" type="password" pattern="/^\S*(?=\S{6,})(?=\S*\d)(?=\S*[A-Z])(?=\S*[a-z])(?=\S*[!@#$%^&*? ])\S*$/" placeholder="MOT DE PASSE" ngModel required #third="ngModel">
+              <input name="confirmPassword" class="confirmPassword item-form" type="password"placeholder="CONFIRMATION MOT DE PASSE" ngModel required #fourth="ngModel">
+              <p>Message d'information</p>
+              <button class="submit item-form">S'inscrire</button>
+            </form>
           </div>
-          <div class="items-right-screen main-screen">
-               <h3>CTA</h3>
-               <p>Message</p>
-               <form #f="ngForm" (ngSubmit)="onSignUp(f)" novalidate>
-                    <input name="name" type="text" pattern="/^[a-zA-Z0-9_-]{4,16}$/" placeholder="nom" ngModel required #first="ngModel">
-                    <input name="email" type="email"  pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" size="30" placeholder="email" ngModel required #second="ngModel">
-                    <input name="password" type="password" pattern="/^\S*(?=\S{6,})(?=\S*\d)(?=\S*[A-Z])(?=\S*[a-z])(?=\S*[!@#$%^&*? ])\S*$/" placeholder="mot de passe" ngModel required #third="ngModel">
-                    <input name="confirmPassword" type="password"placeholder="confirmation de mot de passe" ngModel required #fourth="ngModel">
-                    <button>Submit</button>
-                  </form>
-          </div>
-          <div class="items-right-screen bottom-screen">C</div>
-     </div>
+        </div>
+        <div class="items-right-screen bottom-screen">
+          <a href="#mot de passe oublier">Mot de passe oublier ?</a>
+        </div>
+      </div>
     </div>
-   <div class="switch-page">
-     <button (click)="changeVisibilityScreen()" id="right-btn"></button>   
-     <button (click)="changeVisibilityScreen()" id="left-btn"></button>
-
-   </div> 
+    <div class="switch-page">
+      <button (click)="changeVisibilityScreen()" id="right-btn"></button>
+      <button (click)="changeVisibilityScreen()" id="left-btn"></button>
+    </div> 
 </section>

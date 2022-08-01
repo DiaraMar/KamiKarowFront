@@ -2,11 +2,11 @@
 
 progress {
     border-radius: 7px; 
-    width: 60%;
-    height: 1vh;
+    width: 100%;
+    height: 0.5vh;
   }
   progress::-webkit-progress-bar {
-    background-color: grey;
+    background-color: #CCCCCC;
     border-radius: 7px;
   }
   progress::-webkit-progress-value {

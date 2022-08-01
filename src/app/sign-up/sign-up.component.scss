@@ -27,7 +27,7 @@
   }
 
   .switch-page button{
-      background-color: grey ;
+      background-color: #CCCCCC ;
       border-radius: 25px;
       height: 25px;
       width: 25px;
@@ -41,14 +41,14 @@
 
   .side-sign-up-screen{
 //  box-sizing: border-box;
-    border: solid black 1px;
+    border: 1px solid black !important;
     margin: 0px;
     padding: 0px;
     width: 50%;
     display: grid;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 9fr 1fr;
+    grid-template-rows: 1fr 13fr 4fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -61,13 +61,14 @@
 //   left screen
 .left-screen {
     background: linear-gradient(#FF0065, #FFB58A);
-    display: flex;
-    flex-direction: column;
+
     gap: 35px;
     text-align: center;
     vertical-align: middle;
     justify-content: center;
     color: white;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 2fr 1fr 1fr 4fr 3fr;
 
 }
 
@@ -75,11 +76,24 @@
     font-size: 2em;
 }
 
-.vision-message{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.marque{
+    grid-column-start:2;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    font-size: 2.3em;
+    text-transform: uppercase;
+
 }
+.vision-message{
+    font-size: 1em;
+    grid-column-start:2;
+    grid-column-end: 12;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+
 
 .vision-message p{
     font-size: 1.4em;
@@ -88,22 +102,131 @@
 //Right screen
 .right-screen{
     //TODO background-color: white
-    background-color: plum;
 }
 
 .right-screen div{
     color: black;
 }
+
+//top scren
 .top-screen{
     grid-area: "top-screen";
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+
+}
+.progress-bar {
+    grid-column-start:3;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
-.main-screen{
-    grid-area: "main-screen";
+.alternativeCta {
+    font-size: 0.8em;
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: right;
 }
+.alternativeCta a{
+    text-decoration: none;
+}
+
+//main
+.main-screen{
+    //TODELETE
+    grid-area: "main-screen";
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 2fr 1fr 1fr 4fr 3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+
+    //TODELETE
+.item-main-screen{
+    text-align: center;
+}
+
+.title-page{
+    grid-column-start:2;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 2.3em;
+    text-transform: uppercase;
+
+}
+.sub-title-page{
+    font-size: 1em;
+    grid-column-start:3;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+
+.form{
+    grid-column-start:3;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 9;
+}
+
+.item-form{
+    border-radius: 25px;
+    height: 2.8vh;
+    margin: 1vh 0px 1vh 0px !important;
+    padding: 10px !important;
+    width: 30vh;   
+}
+
+.name{
+    background-color: #FF0036;
+}
+.email{
+    background-color: #FF1E4E;
+}
+.password{
+    background-color: #FF0065;
+}
+.confirmPassword{
+    background-color: #FF4F63;
+}
+
+.form button{
+    background-color: white;
+    margin-top: 30px !important;
+    height: 5vh;
+    padding: 10x 0px !important;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.form button:hover{
+    border: 1px solid black !important;
+    border-radius: 0px;
+}
+
+//bottom
 
 .bottom-screen{
+    font-size: 0.8em;
     grid-area: "bottom-screen";
+    text-align: center;
+}
+.bottom-screen a{
+    color: black;
+
+    text-decoration: none;
+
 }
 
 
@@ -131,6 +254,8 @@
     .side-sign-up-screen{
         height: 100%;
         width: 100%;
+        border: 0px !important;
+
     }
 
     #right-btn{
