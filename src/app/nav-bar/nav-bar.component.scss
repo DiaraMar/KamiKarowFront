@@ -62,9 +62,12 @@ a, h1{
     height:  91vh;
     opacity: 0.9;
     margin: 0;
-    padding: 0;
     position: absolute;
-    width: 50%;
+
+    padding: 5% 0px 0px 5%;
+    width: 45.25%;
+    height:85.5vh;
+
   }
 
   #myLinks .container-myLinks{
@@ -77,6 +80,7 @@ a, h1{
       grid-template-areas:
         "service"
         "enrollement";
+
   }
 
   .service-myLinks{
@@ -100,12 +104,25 @@ a, h1{
     
     #myLinks {
         margin: 0;
-        padding: 0;
         border-radius: 0px 0px 10px 10px;
-        width: 100%;
-        height:  100ù;
+        width: 95%;
+        height: 88.7%;
+
 
       }
 
 
+      // 
+   // height:  83.5vh;
+    //width: 45%;
   }
+
+  @media only screen and (min-width: 1550px) {
+    #myLinks {
+        border-radius: 0px 0px;
+        width: 32.8%;
+        height: 81%;
+
+
+      }
+}  

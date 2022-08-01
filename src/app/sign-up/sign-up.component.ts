@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+
 
 @Component({
   selector: 'app-sign-up',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
+  //CSS Var
   leftScreenIsVisible = true;
   rightScreenIsVisible = false;
   rightScreen = "right-scr";
@@ -25,10 +28,10 @@ export class SignUpComponent implements OnInit {
 
 
 
-  onClickSubmit(result: any) {
-    console.log("You have entered : " + result.email); 
- }
-
+  onSignUp(f: NgForm) {
+    console.log(f.value);  // { first: '', last: '' }
+    console.log(f.valid);  // false
+  }
 
 
 
