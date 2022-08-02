@@ -4,11 +4,10 @@
 //    border-radius: 10px 10px 0px 0px;
     box-sizing: content-box;
     height: 100%;
-    margin: 0;
     overflow: hidden;
     background: linear-gradient(100deg, #000000, #4D4C4C);
     display: flex;
-    height: 100ù;
+    height: 100%;
     position: relative;
 }
 
@@ -59,14 +58,12 @@ a, h1{
     background: linear-gradient(75deg, #FF0065, #4D4C4C);
     border-radius: 0px 0px 0px 10px;
     display: none;
-    height:  91vh;
+    height:  89vh;
     opacity: 0.9;
-    margin: 0;
+    //margin: 0;
     position: absolute;
-
     padding: 5% 0px 0px 5%;
-    width: 45.25%;
-    height:84.75vh;
+    width: 45.35%;
 
   }
 
@@ -96,33 +93,22 @@ a, h1{
     color: white;
     display: block;
     font-size: 1.5em;
-
     padding: 2vh 1vh;
   }
 
   @media only screen and (max-width: 1000px) {
-    
     #myLinks {
-        margin: 0;
+        //margin: 0;
         border-radius: 0px 0px 10px 10px;
+        height: 91%;
         width: 95%;
-        height: 85%;
-
-
       }
-
-
-      // 
-   // height:  83.5vh;
-    //width: 45%;
   }
 
   @media only screen and (min-width: 1550px) {
     #myLinks {
         border-radius: 0px 0px;
-        width: 36%;
-        height: 76.45%;
-
-
+        width: 36.5%;
+        height: 85%;
       }
 }  
